@@ -1,0 +1,334 @@
+{
+  "version": "2.0",
+  "total_network_tickets": 290,
+  "categorization_rate": "33.4%",
+  "patterns": {
+    "connection_refused_error": {
+      "pattern": "(?i)(ERR_CONNECTION_REFUSED|refused to connect|connection refused)",
+      "description": "Browser/application connection refused error",
+      "automation": "HIGH",
+      "typical_cause": "Firewall blocking, service not running, wrong port"
+    },
+    "connection_timeout": {
+      "pattern": "(?i)(connection.*timeout|timed out|telnet.*failed|nc.*timeout)",
+      "description": "Connection attempt times out",
+      "automation": "HIGH",
+      "typical_cause": "Firewall dropping packets, routing issue, service down"
+    },
+    "connection_failed_generic": {
+      "pattern": "(?i)(connection.*failed|failed.*connect|unable to connect|cannot connect|can\\'t connect)",
+      "description": "Generic connection failure",
+      "automation": "MEDIUM",
+      "typical_cause": "Multiple possible causes - needs investigation"
+    },
+    "nacl_approved_not_implemented": {
+      "pattern": "(?i)(NACL.*(approved|not implemented)|approved.*not implemented|NACL.*pending)",
+      "description": "NACL ticket approved in Kumo but not pushed to firewall",
+      "automation": "HIGH",
+      "typical_cause": "Process gap between Kumo and Palo Alto"
+    },
+    "nacl_troubleshooting": {
+      "pattern": "(?i)\\[Troubleshooting\\].*NACL",
+      "description": "NACL rule troubleshooting and validation",
+      "automation": "HIGH",
+      "typical_cause": "Need to validate NACL implementation"
+    },
+    "firewall_rule_request": {
+      "pattern": "(?i)(open traffic|allow (TCP|UDP)|allow.*port|firewall rule|security rule)",
+      "description": "Request to open firewall ports",
+      "automation": "MEDIUM",
+      "typical_cause": "New application connectivity requirement"
+    },
+    "address_group_update": {
+      "pattern": "(?i)(address group|update.*group|add.*to.*group)",
+      "description": "Update firewall address groups",
+      "automation": "HIGH",
+      "typical_cause": "New subnet or IP range needs access"
+    },
+    "network_unreachable": {
+      "pattern": "(?i)(network unreachable|no route|destination unreachable|cannot reach|can\\'t reach)",
+      "description": "Network routing issues",
+      "automation": "MEDIUM",
+      "typical_cause": "Missing route, firewall blocking, network down"
+    },
+    "access_denied_forbidden": {
+      "pattern": "(?i)(access denied|permission denied|forbidden|403|401)",
+      "description": "Access denied at application layer",
+      "automation": "LOW",
+      "typical_cause": "Application-level permissions, not network"
+    },
+    "port_blocked": {
+      "pattern": "(?i)(port.*(block|closed)|block.*port)",
+      "description": "Specific port is blocked",
+      "automation": "HIGH",
+      "typical_cause": "Firewall rule missing or incorrect"
+    },
+    "routing_issue": {
+      "pattern": "(?i)(routing|route.*issue|gateway|split route)",
+      "description": "Network routing problems",
+      "automation": "MEDIUM",
+      "typical_cause": "Routing table configuration"
+    },
+    "vpn_allowlist": {
+      "pattern": "(?i)(VPN.*allowlist|allowlist.*VPN|force tunnel|split tunnel|VPN access)",
+      "description": "VPN domain allowlist requests",
+      "automation": "MEDIUM",
+      "typical_cause": "New domain needs VPN access"
+    },
+    "rvpn_access": {
+      "pattern": "(?i)(RVPN|remote VPN)",
+      "description": "Remote VPN provisioning",
+      "automation": "MEDIUM",
+      "typical_cause": "Vendor/contractor access"
+    },
+    "ssl_certificate": {
+      "pattern": "(?i)(SSL|TLS|certificate|cert.*error)",
+      "description": "SSL/TLS certificate issues",
+      "automation": "LOW",
+      "typical_cause": "Certificate expired, invalid, or not trusted"
+    },
+    "dns_resolution": {
+      "pattern": "(?i)(DNS|name resolution|cannot resolve|nslookup|dig)",
+      "description": "DNS resolution failures",
+      "automation": "HIGH",
+      "typical_cause": "DNS server issue or missing record"
+    },
+    "vendor_guest_access": {
+      "pattern": "(?i)(vendor|guest|contractor).*access",
+      "description": "Vendor or guest network access",
+      "automation": "LOW",
+      "typical_cause": "Temporary access for external parties"
+    },
+    "airwave_access": {
+      "pattern": "(?i)airwave.*access",
+      "description": "Airwave monitoring tool access",
+      "automation": "LOW",
+      "typical_cause": "Permission/role request"
+    },
+    "azure_networking": {
+      "pattern": "(?i)(azure.*(NACL|firewall|NSG|security group))",
+      "description": "Azure-specific networking",
+      "automation": "MEDIUM",
+      "typical_cause": "Cloud firewall rules"
+    },
+    "connectivity_test": {
+      "pattern": "(?i)(test.*connection|telnet|nc -|ping.*port)",
+      "description": "Connection testing commands in ticket",
+      "automation": "HIGH",
+      "typical_cause": "Validation of connectivity"
+    }
+  },
+  "categories": {
+    "connection_refused_error": {
+      "count": 2,
+      "percentage": "0.7%",
+      "automation_level": "HIGH",
+      "description": "Browser/application connection refused error",
+      "samples": [
+        "Immediate deny in the browser:Hmmmm.... can't reach this pagelinxuat-app.prod.linkedin.com refused t",
+        "We want to be able to access oncall.prod.linkedin.com from the hosts listed in the ticket. Currently"
+      ]
+    },
+    "connection_timeout": {
+      "count": 3,
+      "percentage": "1.0%",
+      "automation_level": "HIGH",
+      "description": "Connection attempt times out",
+      "samples": [
+        "skotla@ltx1-app36844 [ ~/centrify ]$ nc -vz wus2wuadcprd01.linkedin.biz 389Ncat: Version 7.95 ( http",
+        "ConnectTimeoutError:            A connection timeout to Artifactory            occurred, while tryin",
+        "The NACL included in this ticket should allow Observe Grafana to ingest Prometheus metrics in our Az"
+      ]
+    },
+    "connection_failed_generic": {
+      "count": 7,
+      "percentage": "2.4%",
+      "automation_level": "MEDIUM",
+      "description": "Generic connection failure",
+      "samples": [
+        "Mac | SSH | Connection to https://phoenix-engtools.linkedin.biz/ failed error",
+        "User unable to connect to multiple applications when on VPN. More details as below",
+        "Hello Team, We are observing issues in the connection between the endpoints above indicated with the"
+      ]
+    },
+    "nacl_approved_not_implemented": {
+      "count": 6,
+      "percentage": "2.1%",
+      "automation_level": "HIGH",
+      "description": "NACL ticket approved in Kumo but not pushed to firewall",
+      "samples": [
+        "The NACL is approved, but not implemented",
+        "The NACL was approved and implemented, but it is getting timeoutSimilar issue in the NACL: https://k",
+        "Please help check the status of the NACLs  linked to these approved requests below , and fix them fo"
+      ]
+    },
+    "nacl_troubleshooting": {
+      "count": 29,
+      "percentage": "10.0%",
+      "automation_level": "HIGH",
+      "description": "NACL rule troubleshooting and validation",
+      "samples": [
+        "[Troubleshooting] - [NACL Request]: PE CIE: BIZ | Prod | Allow TCP port 53 to Google DNS resolvers f",
+        "[Troubleshooting] - [NACL Request]: PE CIE : BIZ | Prod | Allow UDP port 53 to Google DNS resolvers ",
+        "[Troubleshooting] - [NACL Request]: Installing RMAD server in the China domain for taking the domain"
+      ]
+    },
+    "firewall_rule_request": {
+      "count": 5,
+      "percentage": "1.7%",
+      "automation_level": "MEDIUM",
+      "description": "Request to open firewall ports",
+      "samples": [
+        "We recently wanted to open traffic from corp to ips in biz-azure-user. The nacl ticket is done.When ",
+        "The firewall rule FW-U-BIZ-ALL-SCCMDP has been updated to include mgr2-dist02, which should allow tr",
+        "Firewall Rule not applying - FW-U-BIZ-ALL-SCCMDP"
+      ]
+    },
+    "address_group_update": {
+      "count": 3,
+      "percentage": "1.0%",
+      "automation_level": "HIGH",
+      "description": "Update firewall address groups",
+      "samples": [
+        "Am trying to reach help.linkedin.com from databricks dev.  I added the url to the url group but stil",
+        "Hello NetOps Team, I must update an existing Address Group, but it's an \"FW-U-EXT-\" AG, as such I re",
+        "Need support in creating an address group"
+      ]
+    },
+    "network_unreachable": {
+      "count": 1,
+      "percentage": "0.3%",
+      "automation_level": "MEDIUM",
+      "description": "Network routing issues",
+      "samples": [
+        "This is new request, we can't reach from source IP address to destination IP with port 25.Please whi"
+      ]
+    },
+    "port_blocked": {
+      "count": 2,
+      "percentage": "0.7%",
+      "automation_level": "HIGH",
+      "description": "Specific port is blocked",
+      "samples": [
+        "We need to get the new switch configured for wireless and RFID support in LTX1 Suite V. This is curr",
+        "Hello,  it seems like ports 9000, 9001 and 7563 is being blocked by the firewall between azure and o"
+      ]
+    },
+    "routing_issue": {
+      "count": 8,
+      "percentage": "2.8%",
+      "automation_level": "MEDIUM",
+      "description": "Network routing problems",
+      "samples": [
+        "go/merlin is not working in Amstradam vpn gateway",
+        "allow Glean IP to hit our Azure App Gateway (AZ-BIZ-10.42.187.64-28/snet-1)",
+        "recently raised a kumo request to allow Glean IP to hit our Azure App Gateway ticket was closed but "
+      ]
+    },
+    "vpn_allowlist": {
+      "count": 8,
+      "percentage": "2.8%",
+      "automation_level": "MEDIUM",
+      "description": "VPN domain allowlist requests",
+      "samples": [
+        "My team would like a domain allow listed for linkedin VPN access and I was directed here.We currentl",
+        "Please add the following url to the force tunnel configuration.darsydigitalsupplychain.azurewebsites",
+        "MAC | VPN | Request full tunnel VPN access for Observability teams (Metrics Platform, MELT, Signal G"
+      ]
+    },
+    "rvpn_access": {
+      "count": 9,
+      "percentage": "3.1%",
+      "automation_level": "MEDIUM",
+      "description": "Remote VPN provisioning",
+      "samples": [
+        "New RVPN request for SPHAERA INC (DDR0001042)",
+        "New RVPN request for MAQ SOFTWARE (SSA0016452)",
+        "Hi team!I am part of the Raja Software contractor group. We use a restricted VPN - Raja Software con"
+      ]
+    },
+    "ssl_certificate": {
+      "count": 1,
+      "percentage": "0.3%",
+      "automation_level": "LOW",
+      "description": "SSL/TLS certificate issues",
+      "samples": [
+        "TLS 1.2 handshake FAILED. failures occur after SYN/ACK (during ClientHello/ServerHello)"
+      ]
+    },
+    "dns_resolution": {
+      "count": 3,
+      "percentage": "1.0%",
+      "automation_level": "HIGH",
+      "description": "DNS resolution failures",
+      "samples": [
+        "Request to remove \"grid.linkedin.com\" from DNS search for Global Protect VPN. The current behavior o",
+        "Need to confirm if https://wus2ecldprdsa02.azureedge.net is facing network or DNS issues. Currently ",
+        "This request is to cleanup the mentioned CIDR range from IPAM and clear the respective DNS record Th"
+      ]
+    },
+    "vendor_guest_access": {
+      "count": 3,
+      "percentage": "1.0%",
+      "automation_level": "LOW",
+      "description": "Vendor or guest network access",
+      "samples": [
+        "We will have a a vendor coming on site with some broadcast equipment and network switch, that will n",
+        "We are in need of a guest network access LAN port on LSFA-2 Term-02 to use a copper patch to our pod",
+        "For CKO in Singapore talent show and regional streams, we are looking for 3 hard lines for guest acc"
+      ]
+    },
+    "airwave_access": {
+      "count": 2,
+      "percentage": "0.7%",
+      "automation_level": "LOW",
+      "description": "Airwave monitoring tool access",
+      "samples": [
+        "PC | Aruba Airwave | Provision access",
+        "Hi, I am part of Infosec SEEK IR team and need access to Airwave. Could you please grant me the requ"
+      ]
+    },
+    "azure_networking": {
+      "count": 1,
+      "percentage": "0.3%",
+      "automation_level": "MEDIUM",
+      "description": "Azure-specific networking",
+      "samples": [
+        "MAC | Azure | Firewall not working with SQL Server"
+      ]
+    },
+    "connectivity_test": {
+      "count": 4,
+      "percentage": "1.4%",
+      "automation_level": "HIGH",
+      "description": "Connection testing commands in ticket",
+      "samples": [
+        "For LTN5, port GigabitEthernet4/0/20, can you please add IP DHCP Snooping trust. The local SCCM PXE ",
+        "Can't seem to communicate to the destination IPs:> Test-NetConnection -ComputerName 172.16.102.34 -P",
+        "Test-Netconnection fails."
+      ]
+    }
+  },
+  "uncategorized_samples": [
+    "Received laptops without any security restrictions and they are in need of updated profiles. List of",
+    "Ping succeeded but TCP connect to destination failed",
+    "We have been observing firewall failures for the aforementioned Kumo ticket. The hackerrank calls ar",
+    "Hello Team, We're unable to access 100.76.168.68 port 443 (HTTPS) from ATK7 Tokyo endpoint. With oth",
+    "Connection fails.",
+    "We require TCP port 443 to be open for communication between the source Azure NEA (LNKDPROD) and the",
+    "I got networking problem when trying to provision UAT instance in lnkdprod:Error: Error while conver",
+    "The specific error encountered was a NotFoundSubnetException, stating:\"Unable to fetch 1 available s",
+    "Need to configure and enable 2 Switch Port mln8-0-masw01 and mln8-0-masw02. Port No : 25. Vlan : 203",
+    "We need again to have the second port restored to be able to continue our testing, last time you res",
+    "Add a drop and configure the port  and then configure the IP for printers in OREGON Data Center",
+    "Idlhofgasse Studio several fiber ports aren't patched. User Michael Altdorfer requested for 2 ports ",
+    "Touch panel not getting power/network in MDB8-FloorLowerGround-All Hands",
+    "LTX1: Rubrik Need network and IPs to add 4 nodes to the clusterCluster Name: ltx1-rubrik-2-cltr.link",
+    "I am the new manager of the SEEK team based out of Bangalore, I need access to Airwave to monitor HI",
+    "These two URL are believed to be needed for a mobile device on VPN to register a PASSKEY with the MS",
+    "On mac devices - Unable to activate the Snagit license. We have a valid key but it couldn't activate",
+    "GNS team, I'm troubleshooting RFID and SmartLocker network connectivity in Suites H and J in LORE. I",
+    "Need 2 ports configured on LMVC-CSW05 and LMVD-CSW06",
+    "Requesting an available switch and port assignment to patch in drop S5-5 for this CTE customer reque"
+  ]
+}

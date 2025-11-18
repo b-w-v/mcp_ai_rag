@@ -1,0 +1,106 @@
+{
+  "analysis_date": "2025-11-18T11:25:16.436551",
+  "total_nacl_tickets": 189,
+  "categorization_rate": "48.7%",
+  "categories": {
+    "connection_refused": {
+      "count": 2,
+      "percentage": "1.1%",
+      "sample_tickets": [
+        "Immediate deny in the browser:Hmmmm.... can't reach this pagelinxuat-app.prod.linkedin.com refused t",
+        "We want to be able to access oncall.prod.linkedin.com from the hosts listed in the ticket. Currently"
+      ]
+    },
+    "connection_timeout": {
+      "count": 5,
+      "percentage": "2.6%",
+      "sample_tickets": [
+        "The NACL was approved and implemented, but it is getting timeoutSimilar issue in the NACL: https://k",
+        "skotla@ltx1-app36844 [ ~/centrify ]$ nc -vz wus2wuadcprd01.linkedin.biz 389Ncat: Version 7.95 ( http",
+        "Hello Team, We're seeing timeout issues/log delays when accessing the above DST (PRTG in node in LVA",
+        "ConnectTimeoutError:            A connection timeout to Artifactory            occurred, while tryin",
+        "The NACL included in this ticket should allow Observe Grafana to ingest Prometheus metrics in our Az"
+      ]
+    },
+    "connection_failed": {
+      "count": 3,
+      "percentage": "1.6%",
+      "sample_tickets": [
+        "Mac | SSH | Connection to https://phoenix-engtools.linkedin.biz/ failed error",
+        "Hello Team, We are observing issues in the connection between the endpoints above indicated with the",
+        "Test-NetConnection -ComputerName lva1-fdpdbuat02 -Port 5022WARNING: TCP connect to (172.29.19.196 : "
+      ]
+    },
+    "nacl_not_implemented": {
+      "count": 5,
+      "percentage": "2.6%",
+      "sample_tickets": [
+        "The NACL is approved, but not implemented",
+        "Please help check the status of the NACLs  linked to these approved requests below , and fix them fo",
+        "NACL is approved since more than 20 days, but still not implemented - blocking project",
+        "NACL is approved since more than 20 days, but still not implemented - blocking project",
+        "We are experiencing issues calling the AirWatch PROD API from Databricks PROD given this NACL ticket"
+      ]
+    },
+    "address_group": {
+      "count": 22,
+      "percentage": "11.6%",
+      "sample_tickets": [
+        "Am trying to reach help.linkedin.com from databricks dev.  I added the url to the url group but stil",
+        "Hello NetOps Team, I must update an existing Address Group, but it's an \"FW-U-EXT-\" AG, as such I re",
+        "MAC | Azure |Create address and update address group",
+        "Need to update https://acl.corp.linkedin.com/ui/addressgroup_detail/1342570 address group with corre",
+        "Need to create a address group with name: FW-OLA-AISEARCH-DEV"
+      ]
+    },
+    "firewall_rule": {
+      "count": 49,
+      "percentage": "25.9%",
+      "sample_tickets": [
+        "We recently wanted to open traffic from corp to ips in biz-azure-user. The nacl ticket is done.When ",
+        "[Troubleshooting] - [NACL Request]: PE CIE: BIZ | Prod | Allow TCP port 53 to Google DNS resolvers f",
+        "[Troubleshooting] - [NACL Request]: PE CIE : BIZ | Prod | Allow UDP port 53 to Google DNS resolvers ",
+        "[Troubleshooting] - [NACL Request]: Installing RMAD server in the China domain for taking the domain",
+        "The firewall rule FW-U-BIZ-ALL-SCCMDP has been updated to include mgr2-dist02, which should allow tr"
+      ]
+    },
+    "port_blocked": {
+      "count": 1,
+      "percentage": "0.5%",
+      "sample_tickets": [
+        "Hello,  it seems like ports 9000, 9001 and 7563 is being blocked by the firewall between azure and o"
+      ]
+    },
+    "routing_issue": {
+      "count": 5,
+      "percentage": "2.6%",
+      "sample_tickets": [
+        "Hello Team, I am unable to access GitHub documentation pages when connected via Tokyo VPN. This is w",
+        "Hi Team,Tacacs access has stopped working on the below voice router, and we're unable to log in. It ",
+        "SOPS team rvpn -   SG-NETACCESS-COGNIZANT-SALES-OPS  has blocked these links Go/cmtlookup & go/route",
+        "Please allowlist the following IPs to split route list as part of the Microsoft network isolation ef",
+        "Access to ONMS Azure tenant is not working via EMEA-Frankfurt as well as EMEA-Amsterdam.Connections "
+      ]
+    },
+    "other": {
+      "count": 97,
+      "percentage": "51.3%",
+      "sample_tickets": [
+        "Received laptops without any security restrictions and they are in need of updated profiles. List of",
+        "We have been observing firewall failures for the aforementioned Kumo ticket. The hackerrank calls ar",
+        "Hello Team, We're unable to access 100.76.168.68 port 443 (HTTPS) from ATK7 Tokyo endpoint. With oth",
+        "Connection fails.",
+        "We require TCP port 443 to be open for communication between the source Azure NEA (LNKDPROD) and the"
+      ]
+    }
+  },
+  "monthly_distribution": {
+    "Apr": "35",
+    "Aug": "20",
+    "Jul": "25",
+    "Jun": "29",
+    "May": "26",
+    "October": "24",
+    "Sep": "30"
+  }
+}

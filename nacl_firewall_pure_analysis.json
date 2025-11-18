@@ -1,0 +1,203 @@
+{
+  "total_tickets": 538,
+  "nacl_tickets": 79,
+  "categorization_rate": "100.0%",
+  "uncategorized_count": 0,
+  "high_automation": 78,
+  "medium_automation": 1,
+  "categories": {
+    "nacl_approved_not_implemented": {
+      "count": 6,
+      "percentage": "7.6%",
+      "automation": "HIGH",
+      "description": "NACL approved in Kumo but not pushed to Palo Alto",
+      "diagnostic_steps": [
+        "Query Kumo API for ticket status",
+        "Check Palo Alto for rule existence",
+        "Escalate to firewall team if missing",
+        "Provide timeline to requester"
+      ],
+      "samples": [
+        "The NACL is approved, but not implemented",
+        "The NACL was approved and implemented, but it is getting timeoutSimilar issue in the NACL: https://kumo.corp.linkedin.com/nacl-request/31451Here are the",
+        "Please help check the status of the NACLs  linked to these approved requests below , and fix them for China users , thanks.OLT: https://linkedin.atlassian.net",
+        "NACL is approved since more than 20 days, but still not implemented - blocking project",
+        "NACL is approved since more than 20 days, but still not implemented - blocking project"
+      ]
+    },
+    "connection_refused": {
+      "count": 2,
+      "percentage": "2.5%",
+      "automation": "HIGH",
+      "description": "Connection actively refused - firewall blocking or service not running",
+      "diagnostic_steps": [
+        "Check if NACL ticket exists in Kumo",
+        "Verify Palo Alto firewall rule",
+        "Test with telnet/nc",
+        "Check if destination service is running"
+      ],
+      "samples": [
+        "Immediate deny in the browser:Hmmmm.... can't reach this pagelinxuat-app.prod.linkedin.com refused to connect (ERR_CONNECTION_REFUSED)",
+        "We want to be able to access oncall.prod.linkedin.com from the hosts listed in the ticket. Currently we are getting Connection refused error. Please help with t"
+      ]
+    },
+    "firewall_rule_open_traffic": {
+      "count": 1,
+      "percentage": "1.3%",
+      "automation": "MEDIUM",
+      "description": "Request to open firewall ports",
+      "diagnostic_steps": [
+        "Extract source, destination, port, protocol",
+        "Create or reference NACL ticket",
+        "Generate Palo Alto commands",
+        "Schedule implementation"
+      ],
+      "samples": [
+        "We recently wanted to open traffic from corp to ips in biz-azure-user. The nacl ticket is done.When I tested the connection, the telnet worked but the tracero"
+      ]
+    },
+    "nacl_troubleshooting": {
+      "count": 29,
+      "percentage": "36.7%",
+      "automation": "HIGH",
+      "description": "NACL rule validation and troubleshooting",
+      "diagnostic_steps": [
+        "Review NACL ticket in Kumo",
+        "Validate rule in Palo Alto",
+        "Test connectivity",
+        "Provide diagnostic report"
+      ],
+      "samples": [
+        "[Troubleshooting] - [NACL Request]: PE CIE: BIZ | Prod | Allow TCP port 53 to Google DNS resolvers from PE Split DNS infra",
+        "[Troubleshooting] - [NACL Request]: PE CIE : BIZ | Prod | Allow UDP port 53 to Google DNS resolvers from PE Split DNS infra",
+        "[Troubleshooting] - [NACL Request]: Installing RMAD server in the China domain for taking the domain controller's backup",
+        "[Troubleshooting] - [NACL Request]: Indiscovery AIRFLOW Server needs to call Google API Endpoints",
+        "[Troubleshooting] - [NACL Request]: CIE-Storage - DEV | OnPrem/POP NEA  <-> Blob LNKDPROD - TCP (Nasuni)"
+      ]
+    },
+    "firewall_failures": {
+      "count": 1,
+      "percentage": "1.3%",
+      "automation": "HIGH",
+      "description": "Firewall actively blocking traffic",
+      "diagnostic_steps": [
+        "Check firewall logs",
+        "Identify blocking rule",
+        "Determine if intentional or error",
+        "Update rules if needed"
+      ],
+      "samples": [
+        "We have been observing firewall failures for the aforementioned Kumo ticket. The hackerrank calls are intermittently failing with Retrying request to {s}->https"
+      ]
+    },
+    "address_group_management": {
+      "count": 20,
+      "percentage": "25.3%",
+      "automation": "HIGH",
+      "description": "Firewall address group updates",
+      "diagnostic_steps": [
+        "Identify address group name",
+        "Extract IPs/subnets to add",
+        "Update in Palo Alto",
+        "Verify and test"
+      ],
+      "samples": [
+        "Hello NetOps Team, I must update an existing Address Group, but it's an \"FW-U-EXT-\" AG, as such I received an error due to Security reason that I'm not allowed",
+        "MAC | Azure |Create address and update address group",
+        "Need to update https://acl.corp.linkedin.com/ui/addressgroup_detail/1342570 address group with correct subnet details from this below azure resource https:/",
+        "Need to create a address group with name: FW-OLA-AISEARCH-DEV",
+        "Need to create a address group with name: FW-OLA-COSMOS-DEV"
+      ]
+    },
+    "kumo_nacl_ticket": {
+      "count": 5,
+      "percentage": "6.3%",
+      "automation": "HIGH",
+      "description": "References Kumo NACL ticket system",
+      "diagnostic_steps": [
+        "Look up Kumo ticket number",
+        "Check approval status",
+        "Verify implementation",
+        "Update ServiceNow ticket"
+      ],
+      "samples": [
+        "Hi Team,I recently created a couple of NACL tickets,https://kumo.corp.linkedin.com/nacl-request/31277The INFOSEC tickets are completed and closed.ss",
+        "Hello Team, Please review NACL https://kumo.corp.linkedin.com/nacl-request/30634 as the host indicated in the ticket (and an additional in SEAS) are unable",
+        "https://kumo.corp.linkedin.com/nacl-request/31065There is issue in raising RITM, please help implement nacl manually. meanwhile I'm working with kumo team t",
+        "Mac | NACL  | NACL is needed to communicate between 2 hosts and create gns nacl request.",
+        "The NACL included in this ticket should allow Observe Grafana to ingest Prometheus metrics in our Azure Monitor Workspace, however we are seeing network timeout"
+      ]
+    },
+    "connectivity_validation": {
+      "count": 5,
+      "percentage": "6.3%",
+      "automation": "HIGH",
+      "description": "Connection testing in progress",
+      "diagnostic_steps": [
+        "Review test results",
+        "Identify failure point",
+        "Suggest fixes",
+        "Retest after changes"
+      ],
+      "samples": [
+        "skotla@ltx1-app36844 [ ~/centrify ]$ nc -vz wus2wuadcprd01.linkedin.biz 389Ncat: Version 7.95 ( https://nmap.org/ncat )Ncat: TIMEOUT.skotla@ltx1-app3684",
+        "Can't seem to communicate to the destination IPs:> Test-NetConnection -ComputerName 172.16.102.34 -Port 47808WARNING: TCP connect to (172.16.102.34 : 4780",
+        "Test-Netconnection fails.",
+        "Test-NetConnection -ComputerName lva1-fdpdbuat02 -Port 5022WARNING: TCP connect to (172.29.19.196 : 5022) failed",
+        "Source https://acl.corp.linkedin.com/ui/addressgroup_detail/185066Dest uxpdcmidtier.corp.linkedin.com 18501runner [ ~ ]$ nc -vz uxpdcmidtier.corp.linked"
+      ]
+    },
+    "cannot_reach_host": {
+      "count": 5,
+      "percentage": "6.3%",
+      "automation": "HIGH",
+      "description": "Cannot reach destination host/URL",
+      "diagnostic_steps": [
+        "Verify DNS resolution",
+        "Check NACL/firewall rules",
+        "Test connectivity with curl/wget",
+        "Check if destination is up"
+      ],
+      "samples": [
+        "This is new request, we can't reach from source IP address to destination IP with port 25.Please whitelist SMTP protocal from source IP subnet.",
+        "Unable to access https://lidssrelegalhold003.blob.core.windows.net/ Checked with #ask_azuresupport and the thread is: https://linkedin-randd.slack.com/archives/",
+        "MAC | MSFT | Unable to access (https://akalinkmanager.trafficmanager.net)",
+        "user: Iolonda Antunesemail: iantunes@linkedin.comUnable to access appservice url \"https://ncus-flxin-dev-as-01-01.azurewebsites.net/flexin\" and \"https://n",
+        "Hi team, I'm unable to access linked-ei.com I keep getting the error \"999: request failed\", with the text \"Sorry, we are unable to serve your request at this ti"
+      ]
+    },
+    "port_blocked": {
+      "count": 2,
+      "percentage": "2.5%",
+      "automation": "HIGH",
+      "description": "Specific port is blocked",
+      "diagnostic_steps": [
+        "Identify port number",
+        "Check NACL for port",
+        "Verify firewall rule",
+        "Test port connectivity"
+      ],
+      "samples": [
+        "We need to get the new switch configured for wireless and RFID support in LTX1 Suite V. This is currently blocking deployment of the RFID readers. The new switc",
+        "Hello,  it seems like ports 9000, 9001 and 7563 is being blocked by the firewall between azure and our devices in China domain.  These ports used to be open.  C"
+      ]
+    },
+    "connection_timeout": {
+      "count": 3,
+      "percentage": "3.8%",
+      "automation": "HIGH",
+      "description": "Connection times out - likely firewall dropping packets",
+      "diagnostic_steps": [
+        "Check NACL implementation status",
+        "Verify routing to destination",
+        "Check firewall logs",
+        "Test MTU if some traffic works"
+      ],
+      "samples": [
+        "ConnectTimeoutError:            A connection timeout to Artifactory            occurred, while trying to request:            GET https://artifactory.c",
+        "Timed Out Exception",
+        "Timed Out"
+      ]
+    }
+  }
+}
