@@ -1,0 +1,56 @@
+{
+  "category": "LOAD_BALANCER_A10",
+  "total_tickets": 38,
+  "subcategories": {
+    "disable_vip_node": 22,
+    "other": 16
+  },
+  "common_keywords": {
+    "linkedin": 74,
+    "lva1": 36,
+    "disable": 31,
+    "ltx1": 29,
+    "below": 27,
+    "bizlva1": 25,
+    "nodes": 22,
+    "please": 21,
+    "vdscache": 11,
+    "gvip": 9,
+    "team": 7,
+    "vds12": 6,
+    "vds14": 6,
+    "vds10": 6,
+    "maintenance": 6,
+    "vds13": 5,
+    "doing": 5,
+    "under": 5,
+    "vds01": 4,
+    "vds02": 4
+  },
+  "sample_descriptions": [
+    "Disable below nodes from lva1-vds-vip.linkedin.biz (172.29.37.20) VIP and later re-enable once the work is done.lva1-vds12, lva1-vds13, lva1-vds14",
+    "Disable the below nodes from the VIP LVA1-VDS-VIP.linkedin.biz lva1-vds01.linkedin.bizlva1-vds02.linkedin.bizlva1-vds11.linkedin.biz",
+    "Disable the below nodes from the VIP LVA1-VDS-VIP.linkedin.bizlva1-vds10.linkedin.bizlva1-vds09.linkedin.bizlva1-vds08.linkedin.bizlva1-vds07.linked",
+    "Disable the below nodes from the VIP LVA1-VDS-VIP.linkedin.bizlva1-vds01.linkedin.bizlva1-vds02.linkedin.bizlva1-vds11.linkedin.biz",
+    "Disable the below nodes from the VIP   LVA1-VDS-VIP.linkedin.bizlva1-vds10.linkedin.bizlva1-vds09.linkedin.bizlva1-vds08.linkedin.bizlva1-vds07.linked",
+    "Disable the below nodes from the VIP LVA1-VDS-VIP.linkedin.bizlva1-vds12.linkedin.bizlva1-vds13.linkedin.bizlva1-vds14.linkedin.biz",
+    "Please disable the below nodes from VIP \"LVA1-VDS-VIP.linkedin.biz\"lva1-vds10.linkedin.bizlva1-vds09.linkedin.bizlva1-vds08.linkedin.bizlva1-vds07.lin",
+    "Please disable the below nodes from \"LVA1-VDS-VIP.linkedin.biz\" to troubleshoot an issue with VDS. lva1-vds10.linkedin.bizlva1-vds09.linkedin.bizlva1-vds0",
+    "Please disable the below nodes from the VIP \"Lva1-vdscache-vip.linkedin.biz\" as we are doing the server patch maintenance.LVA1-VDS04.linkedin.bizLVA1-VDS0",
+    "Please disable ltx1-vdscache-vip.linkedin.biz (172.29.152.19) under vdscache.gvip.linkedin.biz, so that all new traffic hitting the gvip, goes to other slb VIP"
+  ],
+  "automation_tools": [
+    "a10_vip_manager - Enable/disable VIP nodes",
+    "a10_health_checker - Check node health",
+    "a10_config_backup - Backup before changes",
+    "vip_status_monitor - Monitor VIP status"
+  ],
+  "resolution_steps": [
+    "1. Parse VIP name and node list",
+    "2. Validate VIP exists in A10",
+    "3. Execute disable/enable via A10 API",
+    "4. Verify node status",
+    "5. Update ticket with confirmation",
+    "6. Create reminder for re-enable if needed"
+  ]
+}

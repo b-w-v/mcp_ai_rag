@@ -1,0 +1,478 @@
+{
+  "analysis_date": "2025-11-17T12:33:01.707853",
+  "data_source": "servicenow_tickets.csv",
+  "summary": {
+    "total_tickets": 538,
+    "categories_found": 10,
+    "top_categories": [
+      [
+        "UNCATEGORIZED",
+        {
+          "count": 214,
+          "percentage": 39.78,
+          "subcategories": {
+            "unknown": 214
+          }
+        }
+      ],
+      [
+        "FIREWALL_NACL",
+        {
+          "count": 91,
+          "percentage": 16.91,
+          "subcategories": {
+            "nacl_approved_not_implemented": 5,
+            "connection_refused": 1,
+            "other": 61,
+            "address_group": 21,
+            "connection_timeout": 3
+          }
+        }
+      ],
+      [
+        "SWITCH_PORT_PHYSICAL",
+        {
+          "count": 49,
+          "percentage": 9.11,
+          "subcategories": {
+            "port_activation": 4,
+            "printer_mac": 2,
+            "other": 34,
+            "vlan_config": 9
+          }
+        }
+      ],
+      [
+        "AZURE_CLOUD",
+        {
+          "count": 48,
+          "percentage": 8.92,
+          "subcategories": {
+            "azure_connectivity": 3,
+            "other": 42,
+            "subnet_expansion": 2,
+            "azure_networking": 1
+          }
+        }
+      ],
+      [
+        "LOAD_BALANCER_A10",
+        {
+          "count": 38,
+          "percentage": 7.06,
+          "subcategories": {
+            "disable_vip_node": 22,
+            "other": 16
+          }
+        }
+      ]
+    ]
+  },
+  "category_breakdown": {
+    "UNCATEGORIZED": {
+      "count": 214,
+      "percentage": 39.78,
+      "subcategories": {
+        "unknown": 214
+      }
+    },
+    "VPN_REMOTE_ACCESS": {
+      "count": 32,
+      "percentage": 5.95,
+      "subcategories": {
+        "vpn_new_request": 2,
+        "other": 27,
+        "vpn_connectivity": 2,
+        "vpn_allowlist": 1
+      }
+    },
+    "FIREWALL_NACL": {
+      "count": 91,
+      "percentage": 16.91,
+      "subcategories": {
+        "nacl_approved_not_implemented": 5,
+        "connection_refused": 1,
+        "other": 61,
+        "address_group": 21,
+        "connection_timeout": 3
+      }
+    },
+    "ACCESS_PERMISSIONS": {
+      "count": 35,
+      "percentage": 6.51,
+      "subcategories": {
+        "other": 33,
+        "tool_access": 2
+      }
+    },
+    "AZURE_CLOUD": {
+      "count": 48,
+      "percentage": 8.92,
+      "subcategories": {
+        "azure_connectivity": 3,
+        "other": 42,
+        "subnet_expansion": 2,
+        "azure_networking": 1
+      }
+    },
+    "WIFI_WIRELESS": {
+      "count": 17,
+      "percentage": 3.16,
+      "subcategories": {
+        "slow_wifi": 2,
+        "other": 15
+      }
+    },
+    "LOAD_BALANCER_A10": {
+      "count": 38,
+      "percentage": 7.06,
+      "subcategories": {
+        "disable_vip_node": 22,
+        "other": 16
+      }
+    },
+    "SWITCH_PORT_PHYSICAL": {
+      "count": 49,
+      "percentage": 9.11,
+      "subcategories": {
+        "port_activation": 4,
+        "printer_mac": 2,
+        "other": 34,
+        "vlan_config": 9
+      }
+    },
+    "DATACENTER_SITE_DOWN": {
+      "count": 1,
+      "percentage": 0.19,
+      "subcategories": {
+        "site_outage": 1
+      }
+    },
+    "DNS_DHCP_IP": {
+      "count": 13,
+      "percentage": 2.42,
+      "subcategories": {
+        "other": 12,
+        "dns_issue": 1
+      }
+    }
+  },
+  "priority_distribution": {
+    "Network": 51,
+    "Azure Store Front - Application Service": 1,
+    "Networked Printer": 1,
+    "CTE - NAS - Application Service": 1,
+    "WiFi - Application Service": 5,
+    "Network Access Security": 3,
+    "4 - Low": 390,
+    "3 - Medium": 40,
+    "NaN": 39,
+    "JIra - Application Service": 1,
+    "Guest Wireless Network": 1,
+    "MacOS - Application Service": 1,
+    "IT Support": 1,
+    "Video Meeting": 1,
+    "OLA - Application Service": 1,
+    "MS SQL": 1
+  },
+  "assignment_groups": {
+    "0": 1,
+    "1": 15,
+    "2": 14,
+    "5": 4,
+    "6": 6,
+    "7": 1,
+    "8": 2,
+    "12": 2,
+    "17": 1,
+    "Network Services": 430,
+    "NaN": 39,
+    "11": 2,
+    "13": 2,
+    "14": 2,
+    "15": 1,
+    "4": 6,
+    "10": 1,
+    "3": 9
+  },
+  "automation_potential": {
+    "UNCATEGORIZED": "LOW - Requires manual intervention",
+    "VPN_REMOTE_ACCESS": "MEDIUM - Semi-automatable with validation",
+    "FIREWALL_NACL": "MEDIUM - Semi-automatable with validation",
+    "ACCESS_PERMISSIONS": "LOW - Requires manual intervention",
+    "AZURE_CLOUD": "MEDIUM - Semi-automatable with validation",
+    "WIFI_WIRELESS": "LOW - Requires manual intervention",
+    "LOAD_BALANCER_A10": "HIGH - Fully automatable",
+    "SWITCH_PORT_PHYSICAL": "HIGH - Fully automatable",
+    "DATACENTER_SITE_DOWN": "LOW - Requires manual intervention",
+    "DNS_DHCP_IP": "HIGH - Fully automatable"
+  },
+  "sample_tickets_by_category": {
+    "UNCATEGORIZED": [
+      {
+        "ticket_number": "INC2280329",
+        "description": "Mac | SSH | Connection to https://phoenix-engtools.linkedin.biz/ failed error",
+        "subcategory": "unknown",
+        "priority": "Network",
+        "assignment_group": "0"
+      },
+      {
+        "ticket_number": "CTASK1490021",
+        "description": "Received laptops without any security restrictions and they are in need of updated profiles. List of apps will be captured in the SSA ticket / coming soon",
+        "subcategory": "unknown",
+        "priority": "Network",
+        "assignment_group": "1"
+      },
+      {
+        "ticket_number": "CTASK1505898",
+        "description": "Ping succeeded but TCP connect to destination failed",
+        "subcategory": "unknown",
+        "priority": "Network",
+        "assignment_group": "1"
+      }
+    ],
+    "VPN_REMOTE_ACCESS": [
+      {
+        "ticket_number": "CTASK1492098",
+        "description": "New RVPN request for SPHAERA INC (DDR0001042)",
+        "subcategory": "vpn_new_request",
+        "priority": "Network",
+        "assignment_group": "1",
+        "created": "2025-10-03 00:00:00",
+        "resolved": "2025-10-04 00:00:00"
+      },
+      {
+        "ticket_number": "CTASK1495786",
+        "description": "New RVPN request for MAQ SOFTWARE (SSA0016452)",
+        "subcategory": "vpn_new_request",
+        "priority": "Network",
+        "assignment_group": "1",
+        "created": "2025-10-09 00:00:00",
+        "resolved": "2025-10-09 00:00:00"
+      },
+      {
+        "ticket_number": "CTASK1500547",
+        "description": "My team would like a domain allow listed for linkedin VPN access and I was directed here.We currently have several applications running on Microsoft infrast",
+        "subcategory": "other",
+        "priority": "Network",
+        "assignment_group": "11",
+        "created": "2025-10-16 00:00:00",
+        "resolved": "2025-10-30 00:00:00"
+      }
+    ],
+    "FIREWALL_NACL": [
+      {
+        "ticket_number": "CTASK1498309",
+        "description": "The NACL is approved, but not implemented",
+        "subcategory": "nacl_approved_not_implemented",
+        "priority": "Network",
+        "assignment_group": "1",
+        "created": "2025-10-14 00:00:00",
+        "resolved": "2025-10-14 00:00:00"
+      },
+      {
+        "ticket_number": "CTASK1504879",
+        "description": "Immediate deny in the browser:Hmmmm.... can't reach this pagelinxuat-app.prod.linkedin.com refused to connect (ERR_CONNECTION_REFUSED)",
+        "subcategory": "connection_refused",
+        "priority": "Network",
+        "assignment_group": "1",
+        "created": "2025-10-23 00:00:00",
+        "resolved": "2025-10-23 00:00:00"
+      },
+      {
+        "ticket_number": "CTASK1505881",
+        "description": "We recently wanted to open traffic from corp to ips in biz-azure-user. The nacl ticket is done.When I tested the connection, the telnet worked but the tracero",
+        "subcategory": "other",
+        "priority": "Network",
+        "assignment_group": "1",
+        "created": "2025-10-24 00:00:00",
+        "resolved": "2025-10-24 00:00:00"
+      }
+    ],
+    "ACCESS_PERMISSIONS": [
+      {
+        "ticket_number": "CTASK1504899",
+        "description": "Am trying to reach help.linkedin.com from databricks dev.  I added the url to the url group but still cannot access it.Error: Connection error: HTTPSConnect",
+        "subcategory": "other",
+        "priority": "Network",
+        "assignment_group": "1",
+        "created": "2025-10-23 00:00:00",
+        "resolved": "2025-10-23 00:00:00"
+      },
+      {
+        "ticket_number": "INC2264143",
+        "description": "We will have a a vendor coming on site with some broadcast equipment and network switch, that will need guest hard line internet access. This will be for our De",
+        "subcategory": "other",
+        "priority": "MacOS - Application Service",
+        "assignment_group": "2",
+        "created": "2025-10-16 00:00:00",
+        "resolved": "2025-10-17 00:00:00"
+      },
+      {
+        "ticket_number": "CTASK1488732",
+        "description": "I am the new manager of the SEEK team based out of Bangalore, I need access to Airwave to monitor HIDS in case of security incidents.",
+        "subcategory": "tool_access",
+        "priority": "Network",
+        "assignment_group": "10",
+        "created": "2025-09-29 00:00:00",
+        "resolved": "2025-10-10 00:00:00"
+      }
+    ],
+    "AZURE_CLOUD": [
+      {
+        "ticket_number": "CTASK1498476",
+        "description": "Hello,I'm attempting Azure deployment: https://github.com/linkedin-multiproduct/creative-content-azure/actions/runs/18285179791/job/52058866432, but getting",
+        "subcategory": "azure_connectivity",
+        "priority": "Network",
+        "assignment_group": "2",
+        "created": "2025-10-14 00:00:00",
+        "resolved": "2025-10-15 00:00:00"
+      },
+      {
+        "ticket_number": "CTASK1498537",
+        "description": "I got networking problem when trying to provision UAT instance in lnkdprod:Error: Error while converting Rockefeller file into an ARM template[  {",
+        "subcategory": "other",
+        "priority": "IT Support",
+        "assignment_group": "2",
+        "created": "2025-10-14 00:00:00",
+        "resolved": "2025-10-15 00:00:00"
+      },
+      {
+        "ticket_number": "CTASK1499489",
+        "description": "Mac | DNS |  needs the subnet expanded for IPs",
+        "subcategory": "subnet_expansion",
+        "priority": "Network",
+        "assignment_group": "2",
+        "created": "2025-10-15 00:00:00",
+        "resolved": "2025-10-16 00:00:00"
+      }
+    ],
+    "WIFI_WIRELESS": [
+      {
+        "ticket_number": "CTASK1510380",
+        "description": "Slow corpnet wifi speed in Bellevue office",
+        "subcategory": "slow_wifi",
+        "priority": "Network",
+        "assignment_group": "2",
+        "created": "2025-10-30 00:00:00",
+        "resolved": "2025-10-31 00:00:00"
+      },
+      {
+        "ticket_number": "INC2288292",
+        "description": "Slow internet for guests in training room",
+        "subcategory": "slow_wifi",
+        "priority": "OLA - Application Service",
+        "assignment_group": "2",
+        "created": "2025-10-29 00:00:00",
+        "resolved": "2025-10-30 00:00:00"
+      },
+      {
+        "ticket_number": "CTASK1493076",
+        "description": "Can not connect to corp wifi on 10th floor",
+        "subcategory": "other",
+        "priority": "Network",
+        "assignment_group": "3",
+        "created": "2025-10-06 00:00:00",
+        "resolved": "2025-10-08 00:00:00"
+      }
+    ],
+    "LOAD_BALANCER_A10": [
+      {
+        "ticket_number": "CTASK1504676",
+        "description": "Disable below nodes from lva1-vds-vip.linkedin.biz (172.29.37.20) VIP and later re-enable once the work is done.lva1-vds12, lva1-vds13, lva1-vds14",
+        "subcategory": "disable_vip_node",
+        "priority": "Network",
+        "assignment_group": "3",
+        "created": "2025-10-22 00:00:00",
+        "resolved": "2025-10-26 00:00:00"
+      },
+      {
+        "ticket_number": "CTASK1507668",
+        "description": "Disable the below nodes from the VIP LVA1-VDS-VIP.linkedin.biz lva1-vds01.linkedin.bizlva1-vds02.linkedin.bizlva1-vds11.linkedin.biz",
+        "subcategory": "disable_vip_node",
+        "priority": "Network",
+        "assignment_group": "3",
+        "created": "2025-10-27 00:00:00",
+        "resolved": "2025-10-29 00:00:00"
+      },
+      {
+        "ticket_number": "CTASK1507757",
+        "description": "Disable the below nodes from the VIP LVA1-VDS-VIP.linkedin.bizlva1-vds10.linkedin.bizlva1-vds09.linkedin.bizlva1-vds08.linkedin.bizlva1-vds07.linked",
+        "subcategory": "disable_vip_node",
+        "priority": "Network Access Security",
+        "assignment_group": "3",
+        "created": "2025-10-27 00:00:00",
+        "resolved": "2025-10-29 00:00:00"
+      }
+    ],
+    "SWITCH_PORT_PHYSICAL": [
+      {
+        "ticket_number": "INC2251906",
+        "description": "Need to configure and enable 2 Switch Port mln8-0-masw01 and mln8-0-masw02. Port No : 25. Vlan : 203Port Description : mln8-editbay01-eth1 and mln8-edit",
+        "subcategory": "port_activation",
+        "priority": "WiFi - Application Service",
+        "assignment_group": "5",
+        "created": "2025-10-07 00:00:00",
+        "resolved": "2025-10-13 00:00:00"
+      },
+      {
+        "ticket_number": "INC2251914",
+        "description": "Printer MAC add 9c:93:4e:a1:2f:65 not working.",
+        "subcategory": "printer_mac",
+        "priority": "WiFi - Application Service",
+        "assignment_group": "5",
+        "created": "2025-10-07 00:00:00",
+        "resolved": "2025-10-13 00:00:00"
+      },
+      {
+        "ticket_number": "CTASK1490996",
+        "description": "Add a drop and configure the port  and then configure the IP for printers in OREGON Data Center",
+        "subcategory": "port_activation",
+        "priority": "Network",
+        "assignment_group": "6",
+        "created": "2025-10-02 00:00:00",
+        "resolved": "2025-10-09 00:00:00"
+      }
+    ],
+    "DATACENTER_SITE_DOWN": [
+      {
+        "ticket_number": "CTASK1500563",
+        "description": "Entire site lost all communications. 172.30.226.14 , 172.30.228.13, 172.30.230.19 , 172.30.226.5",
+        "subcategory": "site_outage",
+        "priority": "Network",
+        "assignment_group": "8",
+        "created": "2025-10-16 00:00:00",
+        "resolved": "2025-10-27 00:00:00"
+      }
+    ],
+    "DNS_DHCP_IP": [
+      {
+        "ticket_number": "CTASK1467249",
+        "description": "ahk2-38-asw01.gts Gi1/0/20, can you trust port for ip dhcp snooping.",
+        "subcategory": "other",
+        "priority": "4 - Low",
+        "assignment_group": "Network Services",
+        "created": "Monday, September 1, 2025",
+        "resolved": "Monday, September 1, 2025"
+      },
+      {
+        "ticket_number": "CTASK1479618",
+        "description": "For LTN5, port GigabitEthernet4/0/20, can you please add IP DHCP Snooping trust. The local SCCM PXE server runs on this port.",
+        "subcategory": "other",
+        "priority": "4 - Low",
+        "assignment_group": "Network Services",
+        "created": "Tuesday, September 16, 2025",
+        "resolved": "Tuesday, September 16, 2025"
+      },
+      {
+        "ticket_number": "CTASK1474437",
+        "description": "Unable to fetch 1 available subnet(s) with IP Prefix '/23' and security zone id '413' to reserve in region: 'northcentralus'; Checked in: 10.37.128.0/18, 10.38.",
+        "subcategory": "other",
+        "priority": "4 - Low",
+        "assignment_group": "Network Services",
+        "created": "Tuesday, September 9, 2025",
+        "resolved": "Tuesday, September 16, 2025"
+      }
+    ]
+  }
+}

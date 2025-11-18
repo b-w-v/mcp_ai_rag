@@ -1,0 +1,57 @@
+{
+  "category": "VPN_REMOTE_ACCESS",
+  "total_tickets": 32,
+  "subcategories": {
+    "vpn_new_request": 2,
+    "other": 27,
+    "vpn_connectivity": 2,
+    "vpn_allowlist": 1
+  },
+  "common_keywords": {
+    "rvpn": 9,
+    "team": 8,
+    "linkedin": 7,
+    "access": 7,
+    "request": 6,
+    "unable": 6,
+    "when": 6,
+    "this": 5,
+    "connect": 4,
+    "below": 4,
+    "gateway": 4,
+    "laptop": 4,
+    "software": 3,
+    "these": 3,
+    "tunnel": 3,
+    "connected": 3,
+    "global": 3,
+    "protect": 3,
+    "error": 3,
+    "profile": 3
+  },
+  "sample_descriptions": [
+    "New RVPN request for SPHAERA INC (DDR0001042)",
+    "New RVPN request for MAQ SOFTWARE (SSA0016452)",
+    "My team would like a domain allow listed for linkedin VPN access and I was directed here.We currently have several applications running on Microsoft infrast",
+    "These two URL are believed to be needed for a mobile device on VPN to register a PASSKEY with the MS authenticator app. Both FTE and contingent VPN should h",
+    "User unable to connect to multiple applications when on VPN. More details as below",
+    "go/merlin is not working in Amstradam vpn gateway",
+    "Please add the following url to the force tunnel configuration.darsydigitalsupplychain.azurewebsites.netThis will enable us to access from a trusted egres",
+    "Hi team!I am part of the Raja Software contractor group. We use a restricted VPN - Raja Software contractor RVPN.We use JetBrains IntelliJ IDE for coding/",
+    "MAC | VPN | Request full tunnel VPN access for Observability teams (Metrics Platform, MELT, Signal Generation)",
+    "Hello Team, I am unable to access GitHub documentation pages when connected via Tokyo VPN. This is working however when using different VPN gateways. This h"
+  ],
+  "automation_tools": [
+    "vpn_provisioner - Create VPN accounts",
+    "vpn_allowlist_manager - Manage allowed domains",
+    "vpn_connectivity_tester - Test VPN connectivity"
+  ],
+  "resolution_steps": [
+    "1. Validate requester authorization",
+    "2. Create VPN account in system",
+    "3. Add domains to allowlist if needed",
+    "4. Test VPN connectivity",
+    "5. Send credentials to user",
+    "6. Close ticket"
+  ]
+}

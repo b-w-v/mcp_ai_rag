@@ -1,0 +1,22 @@
+{
+  "category": "DATACENTER_SITE_DOWN",
+  "total_tickets": 1,
+  "subcategories": {
+    "site_outage": 1
+  },
+  "common_keywords": {
+    "entire": 1,
+    "site": 1,
+    "lost": 1,
+    "communications": 1
+  },
+  "sample_descriptions": [
+    "Entire site lost all communications. 172.30.226.14 , 172.30.228.13, 172.30.230.19 , 172.30.226.5"
+  ],
+  "automation_tools": [
+    "Manual intervention required"
+  ],
+  "resolution_steps": [
+    "Manual troubleshooting required"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "category": "UNCATEGORIZED",
+  "total_tickets": 214,
+  "subcategories": {
+    "unknown": 214
+  },
+  "common_keywords": {
+    "network": 47,
+    "error": 43,
+    "linkedin": 37,
+    "https": 32,
+    "team": 25,
+    "with": 25,
+    "need": 23,
+    "please": 23,
+    "this": 20,
+    "security": 17,
+    "notfoundsubnetexception": 17,
+    "subnet": 17,
+    "issue": 17,
+    "help": 17,
+    "unable": 14,
+    "request": 12,
+    "corp": 12,
+    "connection": 11,
+    "devices": 11,
+    "connect": 10
+  },
+  "sample_descriptions": [
+    "Mac | SSH | Connection to https://phoenix-engtools.linkedin.biz/ failed error",
+    "Received laptops without any security restrictions and they are in need of updated profiles. List of apps will be captured in the SSA ticket / coming soon",
+    "Ping succeeded but TCP connect to destination failed",
+    "Hi team , we have created the below request to open RDP and file transfer between the source and the destination but we are not able to perform the same even af",
+    "Connection fails.",
+    "Mac | Jira | EuclidValidationError",
+    "The EEEB teams is migrating few resources from subscription PE - Prod - ISE: Common [G&A] (f4f296c2-8161-4177-9ebc-52eba9963aec) to PE - Prod - SWE: Common [G&A",
+    "The specific error encountered was a NotFoundSubnetException, stating:\"Unable to fetch 1 available subnet(s) with IP Prefix '/27' and security zone ID '312'",
+    "Patchy internet on Level 3 of London Office",
+    "web pages not loading"
+  ],
+  "automation_tools": [
+    "Manual intervention required"
+  ],
+  "resolution_steps": [
+    "Manual troubleshooting required"
+  ]
+}

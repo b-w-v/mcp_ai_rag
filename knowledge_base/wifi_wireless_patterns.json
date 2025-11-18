@@ -1,0 +1,55 @@
+{
+  "category": "WIFI_WIRELESS",
+  "total_tickets": 17,
+  "subcategories": {
+    "slow_wifi": 2,
+    "other": 15
+  },
+  "common_keywords": {
+    "wifi": 16,
+    "corporate": 5,
+    "slow": 4,
+    "floor": 3,
+    "wireless": 3,
+    "office": 2,
+    "10th": 2,
+    "rfid": 2,
+    "with": 2,
+    "network": 2,
+    "corpnet": 1,
+    "speed": 1,
+    "bellevue": 1,
+    "internet": 1,
+    "guests": 1,
+    "training": 1,
+    "room": 1,
+    "connect": 1,
+    "corp": 1,
+    "connectivity": 1
+  },
+  "sample_descriptions": [
+    "Slow corpnet wifi speed in Bellevue office",
+    "Slow internet for guests in training room",
+    "Can not connect to corp wifi on 10th floor",
+    "wifi on 10th floor is slow",
+    "Wifi connectivity in B7 Senate is bad",
+    "Mac | Corporate WiFi issues at LOR1 | cert authority error",
+    "Stockholm Office Wifi unstable",
+    "We need to get the new switch configured for wireless and RFID support in LTX1 Suite V. This is currently blocking deployment of the RFID readers. The new switc",
+    "Analyze all core routers, switches, and wireless d...",
+    "PC | Workplace | Setup wifi in locker rooms"
+  ],
+  "automation_tools": [
+    "airwave_ap_checker - Check AP status",
+    "wifi_signal_analyzer - Analyze signal strength",
+    "client_troubleshooter - Diagnose client issues"
+  ],
+  "resolution_steps": [
+    "1. Identify location (office, floor)",
+    "2. Check AP status in Airwave",
+    "3. Check client device logs",
+    "4. Test signal strength at location",
+    "5. Escalate if AP issue found",
+    "6. Provide workaround to user"
+  ]
+}

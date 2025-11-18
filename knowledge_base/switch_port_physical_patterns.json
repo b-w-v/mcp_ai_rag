@@ -1,0 +1,52 @@
+{
+  "category": "SWITCH_PORT_PHYSICAL",
+  "total_tickets": 49,
+  "subcategories": {
+    "port_activation": 4,
+    "printer_mac": 2,
+    "other": 34,
+    "vlan_config": 9
+  },
+  "common_keywords": {
+    "address": 26,
+    "vlan": 18,
+    "request": 18,
+    "lookup": 14,
+    "switch": 13,
+    "port": 12,
+    "please": 12,
+    "deskphone": 8,
+    "need": 6,
+    "help": 6,
+    "this": 6,
+    "network": 6,
+    "whitelist": 5,
+    "ports": 5,
+    "access": 5,
+    "corp": 5,
+    "configure": 4,
+    "mln8": 4,
+    "printer": 4,
+    "ahk2": 4
+  },
+  "sample_descriptions": [
+    "Need to configure and enable 2 Switch Port mln8-0-masw01 and mln8-0-masw02. Port No : 25. Vlan : 203Port Description : mln8-editbay01-eth1 and mln8-edit",
+    "Printer MAC add 9c:93:4e:a1:2f:65 not working.",
+    "Add a drop and configure the port  and then configure the IP for printers in OREGON Data Center",
+    "Whitelist the new printer Mac Address",
+    "Idlhofgasse Studio several fiber ports aren't patched. User Michael Altdorfer requested for 2 ports activation. Fiber ports, patch panel & switch photos attac",
+    "PC | DHCP | IOT Vlan",
+    "[MAC Request] - MAC address lookup",
+    "[MAC Request] - MAC address lookup",
+    "please show port channel config for UCS03, UCS02 and UCS01 on these switches. Need to verify if the vlans are correctThanks",
+    "Can you please create a new VLAN at AHK2 for SCCM Imaging.Please set the address pool to be 5 addresses.Once the VLAN has been created, I'll need help t"
+  ],
+  "automation_tools": [
+    "port_configurator - Configure switch ports",
+    "vlan_manager - Manage VLAN assignments",
+    "mac_whitelist_manager - Whitelist MAC addresses"
+  ],
+  "resolution_steps": [
+    "Manual troubleshooting required"
+  ]
+}

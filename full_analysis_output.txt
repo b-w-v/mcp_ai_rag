@@ -1,0 +1,108 @@
+✓ Loaded 538 tickets from servicenow_tickets.csv
+✓ Columns: ['ID', 'Short Description', 'Created', 'Closed', 'Assignment Group', 'Assigned to', 'Service CI', 'Priority', 'Unnamed: 8', 'Data_Source_Sheet']
+
+🔍 Analyzing tickets...
+
+📊 Generating statistics...
+
+================================================================================
+SERVICENOW TICKET ANALYSIS - ONCALL AGENT
+================================================================================
+
+📊 TOTAL TICKETS: 538
+
+📁 BREAKDOWN BY CATEGORY:
+--------------------------------------------------------------------------------
+  UNCATEGORIZED                    214 tickets ( 39.8%)
+    ├─ unknown                              214 tickets
+  FIREWALL_NACL                     91 tickets ( 16.9%)
+    ├─ other                                 61 tickets
+    ├─ address_group                         21 tickets
+    ├─ nacl_approved_not_implemented          5 tickets
+  SWITCH_PORT_PHYSICAL              49 tickets (  9.1%)
+    ├─ other                                 34 tickets
+    ├─ vlan_config                            9 tickets
+    ├─ port_activation                        4 tickets
+  AZURE_CLOUD                       48 tickets (  8.9%)
+    ├─ other                                 42 tickets
+    ├─ azure_connectivity                     3 tickets
+    ├─ subnet_expansion                       2 tickets
+  LOAD_BALANCER_A10                 38 tickets (  7.1%)
+    ├─ disable_vip_node                      22 tickets
+    ├─ other                                 16 tickets
+  ACCESS_PERMISSIONS                35 tickets (  6.5%)
+    ├─ other                                 33 tickets
+    ├─ tool_access                            2 tickets
+  VPN_REMOTE_ACCESS                 32 tickets (  6.0%)
+    ├─ other                                 27 tickets
+    ├─ vpn_new_request                        2 tickets
+    ├─ vpn_connectivity                       2 tickets
+  WIFI_WIRELESS                     17 tickets (  3.2%)
+    ├─ other                                 15 tickets
+    ├─ slow_wifi                              2 tickets
+  DNS_DHCP_IP                       13 tickets (  2.4%)
+    ├─ other                                 12 tickets
+    ├─ dns_issue                              1 tickets
+  DATACENTER_SITE_DOWN               1 tickets (  0.2%)
+    ├─ site_outage                            1 tickets
+
+🔧 AUTOMATION POTENTIAL:
+--------------------------------------------------------------------------------
+  UNCATEGORIZED                    214 tickets - LOW - Requires manual intervention
+  VPN_REMOTE_ACCESS                 32 tickets - MEDIUM - Semi-automatable with validation
+  FIREWALL_NACL                     91 tickets - MEDIUM - Semi-automatable with validation
+  ACCESS_PERMISSIONS                35 tickets - LOW - Requires manual intervention
+  AZURE_CLOUD                       48 tickets - MEDIUM - Semi-automatable with validation
+  WIFI_WIRELESS                     17 tickets - LOW - Requires manual intervention
+  LOAD_BALANCER_A10                 38 tickets - HIGH - Fully automatable
+  SWITCH_PORT_PHYSICAL              49 tickets - HIGH - Fully automatable
+  DATACENTER_SITE_DOWN               1 tickets - LOW - Requires manual intervention
+  DNS_DHCP_IP                       13 tickets - HIGH - Fully automatable
+
+⚡ PRIORITY DISTRIBUTION:
+--------------------------------------------------------------------------------
+  4 - Low           390 tickets ( 72.5%)
+  Network            51 tickets (  9.5%)
+  3 - Medium         40 tickets (  7.4%)
+  nan                39 tickets (  7.2%)
+  WiFi - Application Service     5 tickets (  0.9%)
+  Network Access Security     3 tickets (  0.6%)
+  Azure Store Front - Application Service     1 tickets (  0.2%)
+  Networked Printer     1 tickets (  0.2%)
+  CTE - NAS - Application Service     1 tickets (  0.2%)
+  JIra - Application Service     1 tickets (  0.2%)
+  Guest Wireless Network     1 tickets (  0.2%)
+  MacOS - Application Service     1 tickets (  0.2%)
+  IT Support          1 tickets (  0.2%)
+  Video Meeting       1 tickets (  0.2%)
+  OLA - Application Service     1 tickets (  0.2%)
+  MS SQL              1 tickets (  0.2%)
+
+👥 TOP ASSIGNMENT GROUPS:
+--------------------------------------------------------------------------------
+  Network Services                           430 tickets ( 79.9%)
+  nan                                         39 tickets (  7.2%)
+  1                                           15 tickets (  2.8%)
+  2                                           14 tickets (  2.6%)
+  3                                            9 tickets (  1.7%)
+  6                                            6 tickets (  1.1%)
+  4                                            6 tickets (  1.1%)
+  5                                            4 tickets (  0.7%)
+  8                                            2 tickets (  0.4%)
+  12                                           2 tickets (  0.4%)
+
+================================================================================
+
+💾 Generating reports...
+
+✓ Report saved to: ticket_analysis_report.json
+
+✓ Knowledge base generated in: knowledge_base/
+
+✅ Analysis complete!
+
+Next steps:
+1. Review: ticket_analysis_report.json
+2. Review: knowledge_base/ directory
+3. Use generated knowledge bases to build MCP tools
+4. Deploy oncall agent with automation capabilities

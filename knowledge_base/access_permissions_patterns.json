@@ -1,0 +1,48 @@
+{
+  "category": "ACCESS_PERMISSIONS",
+  "total_tickets": 35,
+  "subcategories": {
+    "other": 33,
+    "tool_access": 2
+  },
+  "common_keywords": {
+    "access": 35,
+    "issue": 10,
+    "unable": 9,
+    "network": 7,
+    "team": 6,
+    "linkedin": 5,
+    "will": 5,
+    "need": 5,
+    "this": 5,
+    "site": 4,
+    "endpoint": 4,
+    "request": 4,
+    "able": 4,
+    "split": 4,
+    "website": 4,
+    "error": 3,
+    "with": 3,
+    "guest": 3,
+    "hard": 3,
+    "seek": 3
+  },
+  "sample_descriptions": [
+    "Am trying to reach help.linkedin.com from databricks dev.  I added the url to the url group but still cannot access it.Error: Connection error: HTTPSConnect",
+    "We will have a a vendor coming on site with some broadcast equipment and network switch, that will need guest hard line internet access. This will be for our De",
+    "I am the new manager of the SEEK team based out of Bangalore, I need access to Airwave to monitor HIDS in case of security incidents.",
+    "We are in need of a guest network access LAN port on LSFA-2 Term-02 to use a copper patch to our podium in Focus for the AI Media Day being setup and run from 9",
+    "Windows| Tracker | Access issue",
+    "Hi Team, We received an alert from WIZ for the creation of inbound policy rule which allows access to the resource from any public IP address. Below are the d",
+    "Public Endpoint not communicating with Private endpoint fro external access studio sync",
+    "MediaEng would like to request a dashboard from LNY2 to LMVE for network monitoring approximately 3Gbps of data as well as an on call GNS engineer for support o",
+    "Hi Team,Tacacs access has stopped working on the below voice router, and we're unable to log in. It was working earlier but suddenly stopped. Could you plea",
+    "Since this morning, I've been having trouble accessing websites \u2014 I keep getting \"This site can't be reached.\""
+  ],
+  "automation_tools": [
+    "Manual intervention required"
+  ],
+  "resolution_steps": [
+    "Manual troubleshooting required"
+  ]
+}

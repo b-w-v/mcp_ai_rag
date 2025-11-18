@@ -1,0 +1,59 @@
+{
+  "category": "FIREWALL_NACL",
+  "total_tickets": 91,
+  "subcategories": {
+    "nacl_approved_not_implemented": 5,
+    "connection_refused": 1,
+    "other": 61,
+    "address_group": 21,
+    "connection_timeout": 3
+  },
+  "common_keywords": {
+    "nacl": 57,
+    "request": 37,
+    "troubleshooting": 29,
+    "address": 28,
+    "group": 22,
+    "linkedin": 20,
+    "azure": 16,
+    "port": 16,
+    "https": 16,
+    "lnkdprod": 13,
+    "need": 13,
+    "with": 12,
+    "access": 11,
+    "prod": 9,
+    "corp": 8,
+    "please": 8,
+    "this": 7,
+    "connect": 7,
+    "ticket": 7,
+    "firewall": 7
+  },
+  "sample_descriptions": [
+    "The NACL is approved, but not implemented",
+    "Immediate deny in the browser:Hmmmm.... can't reach this pagelinxuat-app.prod.linkedin.com refused to connect (ERR_CONNECTION_REFUSED)",
+    "We recently wanted to open traffic from corp to ips in biz-azure-user. The nacl ticket is done.When I tested the connection, the telnet worked but the tracero",
+    "[Troubleshooting] - [NACL Request]: PE CIE: BIZ | Prod | Allow TCP port 53 to Google DNS resolvers from PE Split DNS infra",
+    "[Troubleshooting] - [NACL Request]: PE CIE : BIZ | Prod | Allow UDP port 53 to Google DNS resolvers from PE Split DNS infra",
+    "We have been observing firewall failures for the aforementioned Kumo ticket. The hackerrank calls are intermittently failing with Retrying request to {s}->https",
+    "[Troubleshooting] - [NACL Request]: Installing RMAD server in the China domain for taking the domain controller's backup",
+    "Hello Team, We're unable to access 100.76.168.68 port 443 (HTTPS) from ATK7 Tokyo endpoint. With other VPN endpoints access is working. Access from the ATK7",
+    "The NACL was approved and implemented, but it is getting timeoutSimilar issue in the NACL: https://kumo.corp.linkedin.com/nacl-request/31451Here are the",
+    "We require TCP port 443 to be open for communication between the source Azure NEA (LNKDPROD) and the Blob storage destination (LNKDPROD). However, when we attem"
+  ],
+  "automation_tools": [
+    "nacl_validator - Validate NACL ticket status",
+    "palo_alto_policy_checker - Check firewall rules",
+    "connectivity_tester - Test TCP/UDP connectivity",
+    "kumo_api_integration - Query NACL status"
+  ],
+  "resolution_steps": [
+    "1. Extract source IP, destination IP, port, protocol",
+    "2. Query Kumo for NACL ticket status",
+    "3. Check Palo Alto for implemented rule",
+    "4. Test connectivity with telnet/nc",
+    "5. If timeout, check routing and destination",
+    "6. Update ticket with findings"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "category": "AZURE_CLOUD",
+  "total_tickets": 48,
+  "subcategories": {
+    "azure_connectivity": 3,
+    "other": 42,
+    "subnet_expansion": 2,
+    "azure_networking": 1
+  },
+  "common_keywords": {
+    "azure": 42,
+    "https": 13,
+    "lnkdprod": 13,
+    "error": 12,
+    "network": 12,
+    "linkedin": 11,
+    "access": 10,
+    "service": 9,
+    "need": 8,
+    "connectivity": 7,
+    "with": 7,
+    "this": 7,
+    "while": 6,
+    "have": 6,
+    "unable": 6,
+    "team": 5,
+    "when": 4,
+    "issues": 4,
+    "prod": 4,
+    "issue": 4
+  },
+  "sample_descriptions": [
+    "Hello,I'm attempting Azure deployment: https://github.com/linkedin-multiproduct/creative-content-azure/actions/runs/18285179791/job/52058866432, but getting",
+    "I got networking problem when trying to provision UAT instance in lnkdprod:Error: Error while converting Rockefeller file into an ARM template[  {",
+    "Mac | DNS |  needs the subnet expanded for IPs",
+    "Need more IP Space in EASTUS region in lnkdprod tenant",
+    "connectivity issues for the vector-message-consumer service consuming messages from an Azure EventHub via a Private Endpoint.https://linkedin.atlassian.net/br",
+    "prod-fsmo.lnkdprod.com communication issue with MDI endpoint",
+    "Hi,We'd need two new public IP addresses reserved that can NAT to the new VDI frontend Azure LBs in the new Azure regions EUS and Central India.I'd reach",
+    "Most Azure service nodes under our Subscription cannot connect to the keyvault URL or other services. Instances including: ncus-prd-epe-finance-fnora-rg/eus",
+    "allow Glean IP to hit our Azure App Gateway (AZ-BIZ-10.42.187.64-28/snet-1)",
+    "recently raised a kumo request to allow Glean IP to hit our Azure App Gateway ticket was closed but not working.This is an ingress ACL, need manual fix."
+  ],
+  "automation_tools": [
+    "azure_subnet_expander - Expand subnets",
+    "azure_address_group_manager - Manage address groups",
+    "azure_connectivity_tester - Test Azure connectivity"
+  ],
+  "resolution_steps": [
+    "Manual troubleshooting required"
+  ]
+}

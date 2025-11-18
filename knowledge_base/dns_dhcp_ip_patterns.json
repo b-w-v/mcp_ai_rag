@@ -1,0 +1,50 @@
+{
+  "category": "DNS_DHCP_IP",
+  "total_tickets": 13,
+  "subcategories": {
+    "other": 12,
+    "dns_issue": 1
+  },
+  "common_keywords": {
+    "u0027": 6,
+    "dhcp": 5,
+    "unable": 5,
+    "fetch": 5,
+    "available": 5,
+    "subnet": 5,
+    "with": 5,
+    "prefix": 5,
+    "security": 5,
+    "zone": 5,
+    "reserve": 5,
+    "region": 4,
+    "port": 3,
+    "snooping": 3,
+    "checked": 3,
+    "notfoundsubnetexception": 3,
+    "trust": 2,
+    "this": 2,
+    "northcentralus": 2,
+    "request": 2
+  },
+  "sample_descriptions": [
+    "ahk2-38-asw01.gts Gi1/0/20, can you trust port for ip dhcp snooping.",
+    "For LTN5, port GigabitEthernet4/0/20, can you please add IP DHCP Snooping trust. The local SCCM PXE server runs on this port.",
+    "Unable to fetch 1 available subnet(s) with IP Prefix '/23' and security zone id '413' to reserve in region: 'northcentralus'; Checked in: 10.37.128.0/18, 10.38.",
+    "NotFoundSubnetException: Unable to fetch 1 available subnet(s) with IP Prefix \\u0027/27\\u0027 and security zone id \\u002710028\\u0027 to reserve in region: \\u002",
+    "MAC | DHCP | IP Reservation Request",
+    "Unable to fetch 1 available subnet(s) with IP Prefix '/23' and security zone ID '10000' to reserve in region: 'northcentralus'; Checked in: 10.37.128.0/18, 10.3",
+    "MAC | Global protect DNS | Not working",
+    "PC | DHCP | Need DHCP scopes and ranges for New site at New york 16th floor",
+    "We've investigated the issue and found that Euclide is making a DNSDB API call which appears to be failing due to an SSL certificate error.Failing API Endpo",
+    "\"detail\": \"NotFoundSubnetException: Unable to fetch 1 available subnet(s) with IP Prefix \\u0027/24\\u0027 and security zone id \\u0027415\\u0027 to reserve in regi"
+  ],
+  "automation_tools": [
+    "ip_reservator - Reserve IP addresses",
+    "dns_manager - Manage DNS records",
+    "dhcp_scope_manager - Manage DHCP scopes"
+  ],
+  "resolution_steps": [
+    "Manual troubleshooting required"
+  ]
+}
